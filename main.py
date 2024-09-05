@@ -10,11 +10,11 @@ import json
 from os import environ
 
 bot_token = environ.get("TOKEN", "") 
-api_hash = environ.get("HASH", "") 
-api_id = int(environ.get("ID", ""))
+api_hash = environ.get("HASH", "07186e8f2ffe607e99eedf7eaa5e630b") 
+api_id = int(environ.get("ID", "20763817"))
 bot = Client("mybot", api_id=api_id, api_hash=api_hash, bot_token=bot_token)
 
-ss = environ.get("STRING", "")
+ss = environ.get("STRING", "BQCRMb0AL6JyAWYfVANE9pQhJ9Rc-esCmpttzrJgXyuJzCGtfL_NdK_HzWMSDPFMEAgiwTzFJ7PsSZKw5nB9QxW17muGXj6AO0o_PfRQ9i5pah43edI0Ts68XchDT-ZA168dv4WU8fPuu6x84EkdTmnn22472-lWc3_4G9Gsj5SlYfyldcz9ZFaOJTj8nR8CSBr2lZDI62E3LTYgsFL41zHLSctZICMhoBjedjcCFnvhOFC4KqurbYXStQnFjK9xtyXGoxAIYLaCo6glKhK2hz7VwMy2IYB6L904DfofmAztWxSSzD6wFfRd_w3-OvuxD60lgf3EJKIHMBJ4Yu6ABgRpNuDP5QAAAAB5XM4JAA")
 if ss is not None:
 	acc = Client("myacc" ,api_id=api_id, api_hash=api_hash, session_string=ss)
 	acc.start()
@@ -64,7 +64,7 @@ def progress(current, total, message, type):
 @bot.on_message(filters.command(["start"]))
 def send_start(client: pyrogram.client.Client, message: pyrogram.types.messages_and_media.message.Message):
 	bot.send_message(message.chat.id, f"**__👋 Hi** **{message.from_user.mention}**, **I am Save Restricted Bot, I can send you restricted content by it's post link__**\n\n{USAGE}",
-	reply_markup=InlineKeyboardMarkup([[ InlineKeyboardButton("🌐 Update Channel", url="https://t.me/VJ_Botz")]]), reply_to_message_id=message.id)
+	reply_markup=InlineKeyboardMarkup([[ InlineKeyboardButton("🌐 Update Channel", url="https://t.me/moviesandwebserieshubOrzz")]]), reply_to_message_id=message.id)
 
 
 @bot.on_message(filters.text)
